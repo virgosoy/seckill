@@ -1,5 +1,7 @@
 package com.soy.seckill.enums;
 
+import org.omg.CORBA.UNKNOWN;
+
 /**
  * 执行秒杀后状态（数据字典）
  * Created by Soy on 2016/12/12.
