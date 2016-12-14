@@ -89,7 +89,10 @@ public class SeckillController {
      * 执行秒杀
      * @return
      */
-    @RequestMapping("/{seckillId}/{md5}/execution")
+    @RequestMapping(value = "/{seckillId}/{md5}/execution",
+            method = RequestMethod.POST,
+            produces = "application/json;charset=utf-8")
+    @ResponseBody
     public SeckillResult<SeckillExecution> execution(@PathVariable("seckillId") Integer seckillId, @PathVariable("md5") String md5,
                                                      @CookieValue(value = "userPhone", required = false)String userPhone){
         if (userPhone==null){

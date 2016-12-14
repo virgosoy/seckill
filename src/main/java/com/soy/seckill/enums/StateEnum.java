@@ -1,11 +1,13 @@
 package com.soy.seckill.enums;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.omg.CORBA.UNKNOWN;
 
 /**
  * 执行秒杀后状态（数据字典）
  * Created by Soy on 2016/12/12.
  */
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum StateEnum {
     SUCCESS(1,"秒杀成功"),
     END(0,"秒杀结束"),
