@@ -61,8 +61,8 @@ public class SeckillServiceImplTest {
 
     @Test
     public void testSeckillLogic(){
-        int id = 1002;
-        String userPhone = "12343451231";
+        int id = 1003;
+        String userPhone = "12343459039";
         Exposer exposer = seckillService.exposerSeckillUrl(id);
         //如果暴露了url开始秒杀
         if(exposer.isExposed()){

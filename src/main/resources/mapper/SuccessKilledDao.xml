@@ -8,7 +8,7 @@
         VALUES(#{seckillId},#{userPhone},0)
     </update>
 
-    <select id="queryByIdWitchSeckill" resultType="SuccessKilled">
+    <select id="queryByIdWithSeckill" resultType="SuccessKilled">
         SELECT
             sk.seckill_id,
             sk.user_phone,

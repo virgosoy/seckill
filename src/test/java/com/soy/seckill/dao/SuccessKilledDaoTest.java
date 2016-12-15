@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by Soy on 2016/12/12.
  */
@@ -27,7 +25,7 @@ public class SuccessKilledDaoTest {
 
     @Test
     public void queryByIdWitchSeckill() throws Exception {
-        SuccessKilled successKilled = successKilledDao.queryByIdWitchSeckill(1002, "13412341234");
+        SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(1002, "13412341234");
         System.out.println(successKilled);
     }
 

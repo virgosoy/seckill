@@ -1,11 +1,7 @@
 package com.soy.seckill.dao;
 
-import com.soy.seckill.entity.Seckill;
 import com.soy.seckill.entity.SuccessKilled;
 import org.apache.ibatis.annotations.Param;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by Soy on 2016/12/12.
@@ -26,6 +22,6 @@ public interface SuccessKilledDao {
      * @param userPhone
      * @return
      */
-    SuccessKilled queryByIdWitchSeckill(@Param("seckillId") long seckillId, @Param("userPhone") String userPhone);
+    SuccessKilled queryByIdWithSeckill(@Param("seckillId") int seckillId, @Param("userPhone") String userPhone);
 
 }

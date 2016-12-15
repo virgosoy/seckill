@@ -7,7 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:jdbc.properties" />
+    <context:property-placeholder location="classpath:jdbc.properties,
+        classpath:redis.properties" />
 
     <!-- 数据库连接池 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -31,6 +32,12 @@
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
         <property name="basePackage" value="com.soy.seckill.dao" />
+    </bean>
+
+    <!-- dao层bean -->
+    <bean id="redisDao" class="com.soy.seckill.dao.cache.RedisDao">
+        <constructor-arg index="0" value="${redis.host}" />
+        <constructor-arg index="1" value="${redis.post}" />
     </bean>
     
 </beans>
